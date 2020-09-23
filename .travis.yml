@@ -1,13 +1,13 @@
 os: linux
 arch:
 - ppc64le
-- amd64
+#- amd64
 language: c
 compiler: 
 - gcc
 
 before_install:
-    - sudo apt install valgrind
+    - sudo apt-get install valgrind
 
 script:
     - echo "TRAVIS_OS_NAME=$TRAVIS_OS_NAME"
