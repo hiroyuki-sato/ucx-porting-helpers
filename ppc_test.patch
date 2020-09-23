@@ -1,0 +1,12 @@
+diff --git a/src/tools/perf/lib/uct_tests.cc b/src/tools/perf/lib/uct_tests.cc
+index 81d7d227e..a8a9efafe 100644
+--- a/src/tools/perf/lib/uct_tests.cc
++++ b/src/tools/perf/lib/uct_tests.cc
+@@ -10,7 +10,6 @@
+ #  include "config.h"
+ #endif
+ 
+-#define __STDC_FORMAT_MACROS 1
+ #include <inttypes.h>
+ #include <tools/perf/lib/libperf_int.h>
+ 
