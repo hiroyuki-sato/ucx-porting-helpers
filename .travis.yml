@@ -6,8 +6,8 @@ language: c
 compiler: 
 - gcc
 
-#before_install:
-#    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install gnu-sed  ; fi
+before_install:
+    - sudo apt install valgrind
 
 script:
     - echo "TRAVIS_OS_NAME=$TRAVIS_OS_NAME"
