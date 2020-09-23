@@ -7,7 +7,7 @@ compiler:
 - gcc
 
 before_install:
-    - sudo apt-get install valgrind
+    - sudo apt-get install valgrind libnuma-dev
 
 script:
     - echo "TRAVIS_OS_NAME=$TRAVIS_OS_NAME"
