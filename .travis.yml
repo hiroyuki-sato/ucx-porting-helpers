@@ -1,13 +1,19 @@
-os: osx
-language: cpp
-compiler: clang
+os: linux
+arch:
+- ppc64le
+- amd64
+language: c
+compiler: 
+- gcc
 
-before_install:
-    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install gnu-sed  ; fi
+#before_install:
+#    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install gnu-sed  ; fi
 
 script:
     - echo "TRAVIS_OS_NAME=$TRAVIS_OS_NAME"
-    - env
-    - echo
-    - cd scripts/
-    - bash ./build_mac_ucx.bash
+    - cat /etc/os-release
+    - git clone https://github.com/openucx/ucx
+    - cd ucx
+    - ./autogen.sh
+    - ./contrib/configure-devel
+    - make -j4
