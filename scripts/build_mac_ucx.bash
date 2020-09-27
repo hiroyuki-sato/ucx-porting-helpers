@@ -35,7 +35,7 @@ BRANCH_NAME="mac-os-build"
 if ! git remote show | grep hiroyuki-sato >/dev/null; then
 	git remote add hiroyuki-sato https://github.com/hiroyuki-sato/ucx
 fi
-git fetch hiroyuki-sato
+git fetch hiroyuki-sato -p
 
 # Create a new branch to build on MacOS
 git branch -D $BRANCH_NAME || :
